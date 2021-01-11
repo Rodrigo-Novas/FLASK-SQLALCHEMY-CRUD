@@ -1,0 +1,9 @@
+#SI NUESTRO ARCHIVO SE LLAMA APP.PY AUTOMARTICAMNETE FLASK LO TOMA COMO ARCHIVO DE INICIO ASI QUE NO ES NECESARIO CONFIGURAR CON SET FLASK_APP
+
+#para iniciarla ejecuto flask db init, nos crea la carpeta de migrations 
+#tambien usamos el comando flask db migrate para migrar a la base de datos la clase que creamos  
+#Posteriormente usamos flask db update, seria como un mCon.commit lo que hace es guardar los datos en la db    
+#si hacemos algun cambio                      
+#Usamos flask stamp head esto es para saber si tenemos algun problema es necesario ejecutarlo siempre al principio, nos actualiza
+#despues usamos flask db upgrade
+#se instala flask-wtf para manjear mejor los metodos request de get post etc, se usa mas que nada para formularios

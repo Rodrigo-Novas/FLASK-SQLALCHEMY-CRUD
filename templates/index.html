@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inicio</title>
+        <meta name="description" content="Inicio de la pagina">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h1>Sitema de administracion de personas (SAP)</h1>
+        <p>
+            <div>
+                Cantidad de personas:
+
+                {{total_personas}}
+            </div>
+            <div>
+                <a href="{{url_for('agregar')}}">Agregar persona</a> <br/>
+                
+                
+            </div>
+        </p>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in personas %} <!--Con esto itero la cantidad de personas-->
+                        <tr>
+                            <td>
+                                {{persona.id}}
+                            </td>
+                            <td>
+                                {{persona.nombre}}
+                            </td>
+                            <td>
+                                {{persona.apellido}}
+                            </td>
+                            <td>
+                                {{persona.email}}
+                            </td>
+                            <td>
+                                <a href="ver/{{persona.id}}">Ver</a> <!--Esto lo que genera es que podamos ir a ese link-->
+                            </td>
+                            <td>
+                                <a href="editar/{{persona.id}}">Editar</a>
+                            </td>
+                            <td>
+                                <a href="eliminar/{{persona.id}}">Eliminar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

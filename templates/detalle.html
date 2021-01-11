@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ver</title>
+        <meta name="description" content="Ver personas por id">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h1>Ver persona</h1>
+        
+        <div>
+           {{persona.id}}
+           {{persona.nombre}}
+           {{persona.apellido}}
+           {{persona.email}}
+        </div>
+        <br>
+        <a href="{{url_for('inicio')}}">Inicio</a>
+    </body>
+</html>
