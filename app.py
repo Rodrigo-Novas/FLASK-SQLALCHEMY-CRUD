@@ -35,7 +35,7 @@ migrate.init_app(app, db) #para iniciarla ejecuto flask db init, nos crea la car
 #despues usamos flask db upgrade
 
 #configuracion de flask-wtf
-app.config["SECRET_KEY"] = "llave_secreta" #se configura una secret key
+app.config["SECRET_KEY"] = "asdasdasd" #se configura una secret key
 
 
 
